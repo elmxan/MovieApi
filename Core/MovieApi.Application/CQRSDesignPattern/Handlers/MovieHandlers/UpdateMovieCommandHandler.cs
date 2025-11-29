@@ -15,9 +15,9 @@ namespace MovieApi.Application.CQRSDesignPattern.Handlers.MovieHandlers
         {
             _context = context;
         }
-         public async void Handler(UpdateMovieCommand command)
+         public async Task Handle(UpdateMovieCommand command)
         {
-            var value = _context.Movies.Find(command.Id);
+          var value = _context.Movies.Find(command.Id);
           value.Name = command.Name;
           value.CoverImageUrl = command.CoverImageUrl;
           value.Rating = command.Rating;

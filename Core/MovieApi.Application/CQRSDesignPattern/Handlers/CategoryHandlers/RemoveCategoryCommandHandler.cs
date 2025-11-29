@@ -16,10 +16,10 @@ namespace MovieApi.Application.CQRSDesignPattern.Handlers.CategoryHandlers
         {
             _context = context;
         }
-         public async void Handler(RemoveCategoryCommand command)
+         public async Task Handle(RemoveCategoryCommand command)
         {
-              var value = _context.Movies.Find(command.CategoryId);
-            _context.Movies.Remove(value);
+              var value = _context.Categories.Find(command.CategoryId);
+            _context.Categories.Remove(value);
             await _context.SaveChangesAsync();  
 
         }
