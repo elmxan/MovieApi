@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieApi.Domain
+namespace MovieApi.Application.CQRSDesignPattern.Queries.MovieQueries
 {
-    public class Movie
+    public class GetMovieByIdQuery
     {
+
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string CoverImageUrl { get; set; }
+       
     }
 }
