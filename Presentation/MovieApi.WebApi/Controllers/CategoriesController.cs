@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MovieApi.Application.CQRSDesignPattern.Commands.CategoryCommands;
-using MovieApi.Application.CQRSDesignPattern.Handlers.CategoryHandlers;
 using MovieApi.Application.CQRSDesignPattern.Queries.CategoryQueries;
+using MovieApi.Application.Features.CQRSDesignPattern.Commands.CategoryCommands;
+using MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandlers;
 
 namespace MovieApi.WebApi.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CategoriesController : ControllerBase
     {
         private readonly GetCategoryQueryHandler _getCategoryQueryHandler;

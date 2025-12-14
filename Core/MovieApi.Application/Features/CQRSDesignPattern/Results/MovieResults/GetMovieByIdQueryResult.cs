@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieApi.Domain.Entities
+namespace MovieApi.Application.Features.CQRSDesignPattern.Results.MovieResults
 {
-    public class Movie
+    public class GetMovieByIdQueryResult
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string CoverImageUrl { get; set; }
 
         public decimal Rating { get; set; }
-        public string Description   { get; set; }
+        public string  Description { get; set; }
 
         public int Duration { get; set; }
 
@@ -22,8 +22,5 @@ namespace MovieApi.Domain.Entities
         public bool Status { get; set; }
 
 
-
-
     }
-
 }
