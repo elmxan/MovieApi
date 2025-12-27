@@ -2,6 +2,10 @@
 using Microsoft.OpenApi.Models;
 using MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandlers;
 using MovieApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
+using MovieApi.Application.Features.MediatorDesignPattern.Handlers.CastHandlers;
+using MovieApi.Application.Features.MediatorDesignPattern.Handlers.TagHandlers;
+using MovieApi.Application.Features.MediatorDesignPattern.Queries.CastQueries;
+using MovieApi.Application.Features.MediatorDesignPattern.Queries.TagQueries;
 using MovieApi.Persistence.Context;
 using System.Reflection;
 
@@ -22,6 +26,9 @@ builder.Services.AddScoped<GetMovieByIdQueryHandler>();
 builder.Services.AddScoped<CreateMovieCommandHandler>();
 builder.Services.AddScoped<UpdateMovieCommandHandler>();
 builder.Services.AddScoped<RemoveMovieCommandHandler>();
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetTagQueryHandler).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetCastQueryHandler).Assembly));
 
 
 

@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MovieApi.Application.CQRSDesignPattern.Queries.MovieQueries;
+
 using MovieApi.Application.Features.CQRSDesignPattern.Commands.MovieCommands;
 using MovieApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
+using MovieApi.Application.Features.CQRSDesignPattern.Queries.MovieQueries;
 
 namespace MovieApi.WebApi.Controllers
 {

@@ -8,6 +8,6 @@ namespace MovieApi.Application.Features.CQRSDesignPattern.Commands.CategoryComma
 {
     public class CreateCategoryCommand
     {
-        public string  CategoryName { get; set; }
+        public string  CategoryName { get; set; }= string.Empty;
     }
 }

@@ -17,7 +17,7 @@ namespace MovieApi.Application.Features.MediatorDesignPattern.Handlers.CastHandl
             _context = context;
         }
 
-        public   async Task Handle(UpdateCastCommand request, CancellationToken cancellationToken)
+        public async Task Handle(UpdateCastCommand request, CancellationToken cancellationToken)
         {  
             var values = await _context.Casts.FindAsync(request.CastId);
 
@@ -25,15 +25,12 @@ namespace MovieApi.Application.Features.MediatorDesignPattern.Handlers.CastHandl
             {
                 values.Title = request.Title;
                 values.Name = request.Name;
-                values.Surname = request.Surname;
-                values.ImageUrl = request.ImageUrl;
+                values.Surname = request.Surname ?? string.Empty;
+                values.ImageUrl = request.ImageUrl ?? string.Empty;
                 values.OverView = request.OverView;
                 values.Biography = request.Biography;
-                 await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
-            
-
-
         }
     }
 

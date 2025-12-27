@@ -1,4 +1,4 @@
-﻿using MovieApi.Application.CQRSDesignPattern.Commands.MovieCommands;
+﻿
 using MovieApi.Application.Features.CQRSDesignPattern.Commands.CategoryCommands;
 using MovieApi.Persistence.Context;
 using System;

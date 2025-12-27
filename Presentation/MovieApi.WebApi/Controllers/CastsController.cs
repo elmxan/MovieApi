@@ -24,7 +24,7 @@ namespace MovieApi.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCast(CreateCastCommand command)
         {
-            _mediator.Send(command);
+          await  _mediator.Send(command);
             return Ok("ugurla elave edildi");
         }
         [HttpDelete]
