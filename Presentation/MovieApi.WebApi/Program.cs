@@ -4,10 +4,7 @@ using MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandlers;
 using MovieApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
 using MovieApi.Application.Features.MediatorDesignPattern.Handlers.CastHandlers;
 using MovieApi.Application.Features.MediatorDesignPattern.Handlers.TagHandlers;
-using MovieApi.Application.Features.MediatorDesignPattern.Queries.CastQueries;
-using MovieApi.Application.Features.MediatorDesignPattern.Queries.TagQueries;
 using MovieApi.Persistence.Context;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
